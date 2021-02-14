@@ -100,7 +100,7 @@ class Biodatas extends Component
     public function edit($id)
     {
     	if (is_null($id)) {
-    		dd('data not found')
+    		dd('data not found');
     	}
         $bio = Biodata::find($id);
         $content = File::get(storage_path('app/files/'.$bio->nama_file.'.txt'));
@@ -129,7 +129,7 @@ class Biodatas extends Component
     public function delete($id)
     {
     	if (is_null($id)) {
-    		dd('data not found')
+    		dd('data not found');
     	}
         $bio = Biodata::find($id); 
     	// dd(storage_path($bio->path));
